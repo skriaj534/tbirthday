@@ -1,18 +1,18 @@
-/* ============================================================
-   TANIYA'S BIRTHDAY UNIVERSE — script.js
+/* 
+   NAME'S BIRTHDAY UNIVERSE — script.js
    Edit HER_NAME / MY_NAME below to reuse this for someone else.
-   ============================================================ */
+    */
 (() => {
   'use strict';
 
-  const HER_NAME = "Taniya";
+  const HER_NAME = "NAME";
   const MY_NAME  = "Riyaz";
   const TOTAL_PAGES = 7;
 
   const $  = (sel, ctx=document) => ctx.querySelector(sel);
   const $$ = (sel, ctx=document) => Array.from(ctx.querySelectorAll(sel));
 
-  /* ---------------- ambient background: stars + hearts ---------------- */
+  /*   ambient background: stars + hearts   */
   function initStars(){
     const layer = $('#stars');
     const n = window.innerWidth < 420 ? 40 : 60;
@@ -48,7 +48,7 @@
     heartLoopId = setInterval(spawnAmbientHeart, 1400);
   }
 
-  /* ---------------- confetti + burst fx ---------------- */
+  /*   confetti + burst fx   */
   const FX_COLORS = ['#ff2d95','#a855f7','#38bdf8','#ff7ac6','#c4b5fd'];
   function confettiBurst(count=60){
     const layer = $('#fx-layer');
@@ -89,7 +89,7 @@
     }
   }
 
-  /* ---------------- music ---------------- */
+  /*   music   */
   const audio = new Audio('assets/birthday-music.mp3');
   audio.loop = true;
   audio.volume = 0.55;
@@ -126,7 +126,7 @@
     }
   }
 
-  /* ---------------- page navigation ---------------- */
+  /*   page navigation   */
   let currentPage = 1;
   function buildProgressDots(){
     const track = $('#dot-track');
@@ -153,7 +153,7 @@
     if(handler) handler();
   }
 
-  /* ---------------- PAGE 1: terminal + riddle ---------------- */
+  /*   PAGE 1: terminal + riddle   */
   const terminalLines = [
     { text: 'Initializing birthday protocol' , dots:true },
     { text: 'Loading memories...' },
@@ -205,7 +205,7 @@
     });
   }
 
-  /* ---------------- PAGE 2: countdown ---------------- */
+  /*   PAGE 2: countdown   */
   let countdownPlayed = false;
   function playCountdown(){
     if(countdownPlayed) return;
@@ -232,7 +232,7 @@
     step();
   }
 
-  /* ---------------- PAGE 3: favorites quiz ---------------- */
+  /*      PAGE 3: favorites quiz   */
   const quizQuestions = [
     { q:"What's your favorite food? 🍕🍫", opts:["Pizza 🍕","Chocolate 🍫","Biryani 🍗","Something else 😋"] },
     { q:"What's your paln to spend a lazy day with riyaz? 😴", opts:["Sleeping 😴","Watching movies 🎬","Scrolling on my phone 📱",`Talking with ${MY_NAME} ❤️`] },
@@ -290,7 +290,7 @@
   }
   function initQuiz(){ quizIndex = 0; quizAnswers.length = 0; $('#quiz-live').style.display='flex'; $('#quiz-summary').style.display='none'; renderQuiz(); }
 
-  /* ---------------- PAGE 4: the love trap ---------------- */
+  /*   PAGE 4: the love trap   */
   const trapMessages = [
     "Nice try 😂","NO button is currently on vacation.","Error 404: NO not found.",
     "Your finger slipped. Try YES ❤️","The system rejected your answer 😌","Are you REALLY sure? 👀",
@@ -378,7 +378,7 @@
     };
   }
 
-  /* ---------------- PAGE 5: memory timeline (scroll reveal) ---------------- */
+  /*   PAGE 5: memory timeline (scroll reveal)   */
   let memoryObserver = null;
   function initMemories(){
     const cards = $$('#page-5 .memory-card');
@@ -402,7 +402,7 @@
   }
   window.__imgFallback = handleImgFallback;
 
-  /* ---------------- PAGE 6: gift shop ---------------- */
+  /*   PAGE 6: gift shop   */
   function initGiftShop(){
     $$('#page-6 [data-gift-action]').forEach(btn=>{
       btn.addEventListener('click', function handler(){
@@ -425,7 +425,7 @@
     }
   }
 
-  /* ---------------- PAGE 7: final gift box ---------------- */
+  /*   PAGE 7: final gift box   */
   let boxOpened = false;
   function initFinalBox(){
     boxOpened = false;
@@ -449,7 +449,7 @@
     };
   }
 
-  /* ---------------- easter eggs ---------------- */
+  /*   easter eggs   */
   let logoTaps = 0, logoTapTimer = null;
   function showEggToast(msg){
     const t = $('#egg-toast');
@@ -489,7 +489,7 @@
     }
   }
 
-  /* ---------------- page enter handlers ---------------- */
+  /*   page enter handlers   */
   const pageEnterHandlers = {
     1: playTerminal,
     2: playCountdown,
@@ -500,7 +500,7 @@
     7: initFinalBox,
   };
 
-  /* ---------------- wire up all CONTINUE / nav buttons ---------------- */
+  /*   wire up all CONTINUE / nav buttons   */
   function initNav(){
     $$('[data-next]').forEach(btn=>{
       btn.addEventListener('click', ()=>{
@@ -524,7 +524,7 @@
     $('#music-btn').addEventListener('click', toggleMusic);
   }
 
-  /* ---------------- boot ---------------- */
+  /*   boot   */
   document.addEventListener('DOMContentLoaded', ()=>{
     initStars();
     startAmbientHearts();

@@ -1,6 +1,6 @@
-# Taniya's Birthday Universe 💜
+#  Birthday Universe 💜
 
-A one-continuous-story, 7-part interactive birthday site for **Taniya**, made by **Riyaz**.
+A one-continuous-story, 7-part interactive birthday site for **NAME**, made by **Riyaz**.
 Mobile-first (tested down to 360px wide), works with zero dependencies — just open `index.html`.
 
 ## How to add your real content
@@ -26,10 +26,10 @@ Music never force-autoplays (mobile browsers block that anyway) — it starts on
 ### 3. Names
 Both names are set at the top of `script.js`:
 ```js
-const HER_NAME = "Taniya";
+const HER_NAME = "NAME";
 const MY_NAME  = "Riyaz";
 ```
-Changing these updates the quiz options and the love-trap/gift-shop copy automatically. The terminal intro, riddle, letter, and final message are written by hand in `index.html` (search for "Taniya" / "Riyaz") since they're personal — edit the wording there directly.
+Changing these updates the quiz options and the love-trap/gift-shop copy automatically. The terminal intro, riddle, letter, and final message are written by hand in `index.html` (search for "NAME" / "Riyaz") since they're personal — edit the wording there directly.
 
 ### 4. The letter (Page 7)
 Find the `<div class="letter glass glow-edge">` block in `index.html` and rewrite the paragraphs — that's the one part of this site that should sound like *you*, not a template.
