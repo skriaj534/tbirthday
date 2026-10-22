@@ -1,11 +1,11 @@
 /* 
-   NAME'S BIRTHDAY UNIVERSE — script.js
-   Edit HER_NAME / MY_NAME below to reuse this for someone else.
+   Dipsikha'S BIRTHDAY UNIVERSE — script.js
+   Edit HER_Dipsikha / MY_Dipsikha below to reuse this for someone else.
     */
 (() => {
   'use strict';
 
-  const HER_NAME = "NAME";
+  const HER_NAME = "Dipsikha";
   const MY_NAME  = "Riyaz";
   const TOTAL_PAGES = 7;
 
@@ -240,7 +240,7 @@
     { q:"What's your dream place to visit? ✈️🌍", opts:["Beach 🏖️","Mountains 🏔️","Big city 🌃",`Somewhere with ${MY_NAME} ❤️`] },
     { q:"What's your favorite person? 👀❤️", opts:["Only Riyaz ❤️","Riyaz and Riyaz 🥰","My  Riyaz 😎",`${MY_NAME} 😌❤️`] },
   ];
-  const quizReactions = ["Also riyaz's 👀","Okay, I'll remember that ❤️","Interesting choice 😂",`${MY_NAME}'s surely bring you there❤️`,"Ab mereko saram ati re baba❤️"];
+  const quizReactions = [" riyaz knew it 👀","Okay, I'll remember that ❤️","Interesting choice 😂",`${MY_NAME}'s surely bring you there❤️`,"riyaz knew it ❤️"];
   let quizIndex =0;
   const quizAnswers = [];
 
@@ -347,7 +347,7 @@
     btn.disabled = false;
     $('#trap-msg').textContent = '';
     $('#trap-cta').style.display = 'none';
-    $('#yes-btn').textContent = 'YES I do ❤️';
+    $('#yes-btn').textContent = 'YES I want ❤️';
     $('#yes-btn').classList.remove('won');
 
     const evade = (e)=>{
